@@ -12,7 +12,7 @@ export default function Navbar() {
       >
         <div className="container-fluid">
           <Link className="navbar-brand" href="/">
-            SEVEN MA7ES
+            SEVENMA7ES
           </Link>
           <button
             className="navbar-toggler collapsed d-flex d-xl-none flex-column justify-content-around"
