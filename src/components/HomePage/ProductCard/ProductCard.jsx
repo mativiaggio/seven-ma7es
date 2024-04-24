@@ -3,7 +3,7 @@ import Image from "next/image";
 
 function ProductCard() {
   return (
-    <div className="col-4 d-flex justify-content-center align-items-center">
+    <div className="col-xl-4 d-flex justify-content-center align-items-center pb-4">
       <Image
         src="https://dummyimage.com/500X500/cfcfcf/000000.png&text=Prod"
         className="img-fluid"

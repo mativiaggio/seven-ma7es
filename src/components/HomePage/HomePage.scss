@@ -1,0 +1,36 @@
+header {
+  // color: white;
+  height: 100vh;
+  background-image: url(../../../public/img/banner.jpg);
+  background-repeat: no-repeat !important;
+  // background-attachment: $attach !important;
+  background-position: center center !important;
+  z-index: auto;
+  background-size: cover !important;
+  -webkit-background-size: cover !important;
+  -moz-background-size: cover !important;
+  -o-background-size: cover !important;
+
+  // opacity: 50%;
+
+  div {
+    height: 90%;
+    div {
+      div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        // align-items: center;
+        .homepage-title {
+          color: white;
+          font-size: 72px;
+          font-weight: 800;
+        }
+
+        button {
+          width: 50%;
+        }
+      }
+    }
+  }
+}
