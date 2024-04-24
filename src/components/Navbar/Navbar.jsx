@@ -6,10 +6,7 @@ import { BsSearch, BsCart } from "react-icons/bs";
 export default function Navbar() {
   return (
     <>
-      <nav
-        className="navbar navbar-expand-xl navbar-dark bg-dark fixed-top"
-        style={{ padding: "15px" }}
-      >
+      <nav className="navbar navbar-expand-xl navbar-dark bg-dark fixed-top">
         <div className="container-fluid">
           <Link className="navbar-brand" href="/">
             SEVENMA7ES

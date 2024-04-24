@@ -1,6 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 
+// Components
+import ProductCard from "./ProductCard/ProductCard";
+
 function HomePage() {
   return (
     <>
@@ -26,27 +29,9 @@ function HomePage() {
           </div>
 
           <div className="row">
-            <div className="col-4 d-flex justify-content-center align-items-center">
-              <img
-                src="https://dummyimage.com/500X500/cfcfcf/000000.png&text=Prod"
-                className="img-fluid"
-                alt="Banner principal de la home"
-              />
-            </div>
-            <div className="col-4 d-flex justify-content-center align-items-center">
-              <img
-                src="https://dummyimage.com/500X500/cfcfcf/000000.png&text=Prod"
-                className="img-fluid"
-                alt="Banner principal de la home"
-              />
-            </div>
-            <div className="col-4 d-flex justify-content-center align-items-center">
-              <img
-                src="https://dummyimage.com/500X500/cfcfcf/000000.png&text=Prod"
-                className="img-fluid"
-                alt="Banner principal de la home"
-              />
-            </div>
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
           </div>
         </div>
       </section>
