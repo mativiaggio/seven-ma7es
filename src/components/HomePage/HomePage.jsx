@@ -4,6 +4,7 @@ import "./HomePage.scss";
 
 // Components
 import ProductCard from "./ProductCard/ProductCard";
+import CallToAction from "./CallToAction/CallToAction";
 
 // function HomePage() {
 //   return (
@@ -58,7 +59,7 @@ function HomePage() {
               <h1 className="homepage-title">
                 Encontra los mejores mates, al mejor precio.
               </h1>
-              <button>VER PRODUCTOS</button>
+              <CallToAction />
             </div>
           </div>
         </div>

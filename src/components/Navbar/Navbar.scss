@@ -1,5 +1,6 @@
 nav {
-  padding: 30px !important;
+  padding: 10px !important;
+  background-color: black !important;
 
   .navbar-brand {
     letter-spacing: 3px;
@@ -91,6 +92,10 @@ nav {
 
   .nav-item {
     margin-right: 30px;
+
+    .nav-link {
+      text-wrap: nowrap;
+    }
   }
 
   #search-container {
@@ -108,6 +113,33 @@ nav {
       border-radius: 100px;
       height: 42px;
       margin-right: 8px;
+    }
+
+    .search-box {
+      width: 186px;
+      margin-right: 8px;
+      border: 1px solid white;
+      border-radius: 50px;
+      color: white !important;
+
+      display: flex;
+      align-items: center;
+      padding-left: 15px;
+
+      button {
+        background-color: transparent;
+        outline: none;
+        border: none;
+        color: white;
+      }
+
+      input {
+        background-color: transparent;
+        outline: none;
+        color: white;
+        border: none;
+        margin-left: 5px;
+      }
     }
   }
 

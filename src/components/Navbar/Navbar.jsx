@@ -6,7 +6,7 @@ import { BsSearch, BsCart } from "react-icons/bs";
 export default function Navbar() {
   return (
     <>
-      <nav className="navbar navbar-expand-xl navbar-dark bg-dark fixed-top">
+      <nav className="navbar navbar-expand-xl navbar-dark fixed-top">
         <div className="container-fluid">
           <Link className="navbar-brand" href="/">
             SEVENMA7ES
@@ -102,11 +102,11 @@ export default function Navbar() {
               </li>
             </ul>
             <form id="search-container" className="d-flex">
-              <input
+              {/* <input
                 id="search-input"
                 className="form-control me-2"
                 type="search"
-                placeholder="Que andas buscando?"
+                placeholder="Buscar"
                 aria-label="Search"
               />
               <button
@@ -115,7 +115,14 @@ export default function Navbar() {
                 type="submit"
               >
                 <BsSearch />
-              </button>
+              </button> */}
+              <div className="search-box">
+                <button type="submit">
+                  <BsSearch />
+                </button>
+
+                <input type="text" placeholder="Buscar" />
+              </div>
               <li
                 id="cart-button"
                 className="btn btn-outline-light"
