@@ -2,12 +2,18 @@
 
 * {
   // outline: 1px solid red;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Helvetica", sans-serif;
+}
+
+body {
+  background-color: #0f1014 !important;
+  padding: 10px;
 }
 
 .main {
-  margin-top: 60px;
+  margin-top: 72px;
   height: fit-content;
   min-height: 100vh;
   max-height: fit-content;
+  // border-radius: 10px;
 }

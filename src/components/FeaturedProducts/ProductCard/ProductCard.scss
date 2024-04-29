@@ -1,0 +1,38 @@
+.featured-product-card {
+  height: 300px;
+  width: 280px;
+  background-color: #222125;
+  border-radius: 10px;
+  padding: 5px;
+
+  .img-container {
+    height: 60%;
+    border-radius: 10px;
+    overflow: hidden;
+    .card-img-top {
+      height: 100%;
+    }
+  }
+
+  .header-container {
+    padding-top: 5px;
+    .product-name {
+      color: white;
+      font-weight: 600;
+    }
+    .product-buttons {
+      * {
+        float: right;
+      }
+      .heart-button {
+        border: none;
+        outline: none;
+        background-color: transparent;
+        .heart-icon {
+          font-size: x-large;
+          color: white;
+        }
+      }
+    }
+  }
+}

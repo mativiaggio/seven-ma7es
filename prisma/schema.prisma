@@ -12,13 +12,14 @@ datasource db {
 
 
 model Products {
-  id Int @id @default(autoincrement())
+  id String @id @default(uuid())
   name String
-  descriptien String?
+  description String?
   category String?
   provider String?
   date DateTime @default(now())
   image String
   price Float
   stock Int
+  featured Boolean @default(false)
 }

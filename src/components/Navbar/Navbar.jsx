@@ -1,15 +1,42 @@
-import React from "react";
+"use client";
+import React, { useState, useEffect } from "react";
 import "./Navbar.scss";
 import Link from "next/link";
 import { BsSearch, BsCart } from "react-icons/bs";
+import Image from "next/image";
 
 export default function Navbar() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 0;
+      setScrolled(isScrolled);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <>
-      <nav className="navbar navbar-expand-xl navbar-dark fixed-top">
+      <nav
+        className={`navbar navbar-expand-xl navbar-dark fixed-top ${
+          scrolled ? "scrolled" : ""
+        }`}
+      >
         <div className="container-fluid">
           <Link className="navbar-brand" href="/">
-            SEVENMA7ES
+            <Image
+              className="navbar-brand-img"
+              src="/sevenmates/navbar-banner-white.png"
+              width={160}
+              height={42}
+              alt="Logo"
+            />
           </Link>
           <button
             className="navbar-toggler collapsed d-flex d-xl-none flex-column justify-content-around"

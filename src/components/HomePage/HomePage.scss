@@ -2,16 +2,11 @@ header {
   // color: white;
   height: 100vh;
   background-image: url(../../../public/img/banner.jpg);
-  background-repeat: no-repeat !important;
-  // background-attachment: $attach !important;
-  background-position: center center !important;
-  z-index: auto;
-  background-size: cover !important;
-  -webkit-background-size: cover !important;
-  -moz-background-size: cover !important;
-  -o-background-size: cover !important;
-
-  // opacity: 50%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
 
   div {
     height: 90%;
@@ -20,11 +15,15 @@ header {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        // align-items: center;
+        padding-left: 22px !important;
         .homepage-title {
           color: white;
-          font-size: 72px;
-          font-weight: 800;
+          font-size: 42px;
+          font-weight: 500;
+
+          span {
+            font-weight: 800;
+          }
         }
 
         button {

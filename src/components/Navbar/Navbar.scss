@@ -1,6 +1,12 @@
 nav {
   padding: 10px !important;
-  background-color: black !important;
+  background-color: #0f1014 !important;
+
+  div {
+    background-color: #0f1014;
+    padding: 5px;
+    border-radius: 10px;
+  }
 
   .navbar-brand {
     letter-spacing: 3px;
@@ -92,6 +98,11 @@ nav {
 
   .nav-item {
     margin-right: 30px;
+
+    &:hover {
+      background-color: #141414;
+      border-radius: 10px;
+    }
 
     .nav-link {
       text-wrap: nowrap;
