@@ -20,15 +20,17 @@ async function FeaturedProducts() {
   return (
     <>
       <section id="featured-products">
-        <div className="container">
-          <div className="row">
-            <div className="col-12 gx-0 title">
-              <h2>NUESTROS PRODUCTOS SELECCIONADOS</h2>
-            </div>
+        <div className="filter">
+          <div className="container">
             <div className="row">
-              {products.map((product) => (
-                <ProductCard key={product.id} product={product} />
-              ))}
+              <div className="col-12 gx-0 title">
+                <h2>NUESTROS PRODUCTOS SELECCIONADOS</h2>
+              </div>
+              <div className="row">
+                {products.map((product) => (
+                  <ProductCard key={product.id} product={product} />
+                ))}
+              </div>
             </div>
           </div>
         </div>

@@ -1,10 +1,25 @@
 #featured-products {
   min-height: 100vh;
   background-color: #0f1014;
-  padding: 22px;
+  background-image: url(../../../public/img/background.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+  overflow: hidden;
+  // padding: 22px;
 
-  .title {
-    color: white;
-    text-align: center;
+  .filter {
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.103);
+    background-color: rgb(43, 43, 43);
+    backdrop-filter: blur(30px);
+    padding: 22px;
+    .title {
+      color: white;
+      text-align: center;
+    }
   }
 }

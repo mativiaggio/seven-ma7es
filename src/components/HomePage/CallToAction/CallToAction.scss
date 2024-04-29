@@ -1,6 +1,11 @@
 #call-to-action {
   height: 42px;
-  background-color: transparent;
+  background: rgba(255, 255, 255, 0);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   outline: none;
   border: 2px solid white;
   color: white;
@@ -10,7 +15,12 @@
   transition: background-color 0.3s, color 0.3s;
 
   &:hover {
-    background-color: white;
-    color: #0f1014;
+    background: rgba(255, 255, 255, 0.47);
+    // border-radius: 16px;
+    // box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    // border: 1px solid rgba(255, 255, 255, 0.3);
+    // color: #0f1014;
   }
 }
