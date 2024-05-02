@@ -1,74 +1,44 @@
 .featured-product-card {
-  height: 299px;
-  width: 600px;
-  border-radius: 10px;
   display: flex;
-  // background: rgba(255, 255, 255, 0.45);
-  // border-radius: 16px;
-  // box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  // backdrop-filter: blur(5px);
-  // -webkit-backdrop-filter: blur(5px);
-  // border: 1px solid rgba(255, 255, 255, 0.3);
-  background-color: #0f1014;
-  margin: 20px;
-  cursor: pointer;
-  transition: 0.2s ease-in-out;
+  justify-content: center;
+  font-size: small;
 
-  &:hover {
-    box-shadow: 9px 10px 21px -4px rgba(0, 0, 0, 0.199);
-    -webkit-box-shadow: 9px 10px 21px -4px rgba(0, 0, 0, 0.199);
-    -moz-box-shadow: 9px 10px 21px -4px rgba(0, 0, 0, 0.199);
-  }
-  .img-container {
-    width: 50%;
-    border-radius: 50px !important;
+  .card {
+    width: 400px;
+    border: none;
     .card-img-top {
-      height: 299px;
-      width: 100%;
       object-fit: cover;
-      padding: 10px 0px 10px 10px;
-      border-radius: 15px 0px 0px 15px !important;
     }
-  }
 
-  .header-container {
-    width: 50%;
-    color: rgb(180, 180, 180);
-    margin: 10px !important;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    .product-name {
-      color: white;
-      font-weight: 600;
-    }
-    .product-buttons {
+    .card-body {
       display: flex;
-      justify-content: center;
-      align-items: center;
-      * {
-        float: right;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .card-title {
+        font-size: medium;
       }
-      .heart-button {
-        border: none;
-        outline: none;
-        background-color: transparent;
-        .heart-icon {
-          font-size: x-large;
-          color: white;
+
+      .buttons-container {
+        height: 60px;
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        background-color: #eaebf0;
+        border-radius: 10px;
+
+        .quantity-container {
+          display: flex;
+
+          .btn-bs {
+            font-size: 38px !important;
+          }
+
+          input {
+            width: 50px;
+          }
         }
       }
-    }
-
-    .price-container {
-      height: 30%;
-      background: rgba(255, 255, 255, 0);
-      border-radius: 16px;
-      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-      backdrop-filter: blur(5px);
-      -webkit-backdrop-filter: blur(5px);
-      border: 1px solid rgba(255, 255, 255, 0.3);
-      border-radius: 10px;
     }
   }
 }

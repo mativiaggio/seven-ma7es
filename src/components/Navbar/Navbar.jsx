@@ -24,7 +24,7 @@ export default function Navbar() {
   return (
     <>
       <nav
-        className={`navbar navbar-expand-xl navbar-dark fixed-top ${
+        className={`navbar navbar-expand-xl navbar-dark ${
           scrolled ? "scrolled" : ""
         }`}
       >
@@ -32,7 +32,7 @@ export default function Navbar() {
           <Link className="navbar-brand" href="/">
             <Image
               className="navbar-brand-img"
-              src="/sevenmates/navbar-banner-white.png"
+              src="/sevenmates/navbar-banner-white-COPY.png"
               width={160}
               height={42}
               alt="Logo"

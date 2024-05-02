@@ -1,7 +1,12 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import { BsHeartFill, BsHeart } from "react-icons/bs";
+import {
+  BsHeartFill,
+  BsHeart,
+  BsDashSquare,
+  BsPlusSquare,
+} from "react-icons/bs";
 import "./ProductCard.scss";
 
 function ProductCard({ product }) {
@@ -12,44 +17,37 @@ function ProductCard({ product }) {
   };
 
   const truncatedDescription =
-    product.description.length > 200
-      ? product.description.slice(0, 200) + "..."
+    product.description.length > 80
+      ? product.description.slice(0, 80) + "... "
       : product.description;
 
   return (
-    <div id={product.id} className="col-6 gx-0  featured-product-card">
-      <div className="img-container">
+    <div id={product.id} className="col-4 gx-0  featured-product-card">
+      <div className="card">
         {product.image && (
           <Image
             src={`/sevenmates/productos/${JSON.parse(product.image)[0]["1"]}`}
             className="card-img-top"
             alt={product.name}
-            width={200}
-            height={299}
+            width={400}
+            height={300}
           />
         )}
-      </div>
-      <div className="header-container">
-        <div className="container">
-          <div className="row">
-            <div className="col-10 gx-0 product-name">{product.name}</div>
-            <div className="col-2 gx-0 product-buttons">
-              <button onClick={toggleFavorite} className="heart-button">
-                {isFavorite ? (
-                  <BsHeartFill className="heart-icon" />
-                ) : (
-                  <BsHeart className="heart-icon" />
-                )}
-              </button>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-12 gx-0">
-              <p>{truncatedDescription}</p>
-            </div>
+
+        <div className="card-body">
+          <h5 className="card-title">{product.name}</h5>
+          <p className="card-text">
+            {truncatedDescription}
+            <a href="#" className="">
+              Ver mas
+            </a>
+          </p>
+          <div className="buttons-container">
+            <button className="btn btn-primary">Agregar al carrito</button>
+
+            <div className="quantity-container"></div>
           </div>
         </div>
-        <div className="container price-container">price</div>
       </div>
     </div>
   );
