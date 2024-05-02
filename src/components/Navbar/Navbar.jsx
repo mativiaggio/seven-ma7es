@@ -1,33 +1,24 @@
-"use client";
-import React, { useState, useEffect } from "react";
+// "use client";
+import React from "react";
 import "./Navbar.scss";
 import Link from "next/link";
 import { BsSearch, BsCart } from "react-icons/bs";
 import Image from "next/image";
+import { SessionProvider } from "next-auth/react";
+import { getServerSession } from "next-auth/react";
 
-export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
+import { authOptions } from "@/../pages/api/auth/[...nextauth]";
+import Login from "../Auth/Login/Login";
+import Logout from "../Auth/Logout/Logout";
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const isScrolled = window.scrollY > 0;
-      setScrolled(isScrolled);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+export default async function Navbar() {
+  // Session
+  // const session = await getServerSession(authOptions);
+  // console.log(session);
 
   return (
     <>
-      <nav
-        className={`navbar navbar-expand-xl navbar-dark ${
-          scrolled ? "scrolled" : ""
-        }`}
-      >
+      <nav className={`navbar navbar-expand-xl navbar-dark`}>
         <div className="container-fluid">
           <Link className="navbar-brand" href="/">
             <Image
@@ -163,6 +154,17 @@ export default function Navbar() {
                   <BsCart />
                 </Link>
               </li>
+              {/* <li
+                id="cart-button"
+                className="btn btn-outline-light"
+                type="submit"
+              >
+                <div className="nav-link active">
+                  <SessionProvider session={session}>
+                    {!session ? <Login /> : <Logout />}
+                  </SessionProvider>
+                </div>
+              </li> */}
             </form>
           </div>
         </div>
