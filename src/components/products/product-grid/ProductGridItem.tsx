@@ -28,9 +28,9 @@ function ProductGridItem({ product }: Props) {
           alt={product.name}
           onMouseEnter={() => setProductImage("/sevenmates/product-mock2.jpeg")}
           onMouseLeave={() => setProductImage("/sevenmates/product-mock.jpg")}
-          className="w-full object-cover max-h-[350px] rounded-sm"
-          width={350}
-          height={350}
+          className="w-full object-cover max-h-[500px] rounded-sm"
+          width={500}
+          height={500}
         />
       </Link>
 

@@ -16,7 +16,8 @@ async function getCategories() {
   await mongooseConnect();
 
   const categories = await Category.find({ parent: { $exists: false } });
-  return categories;
+  const data = JSON.parse(JSON.stringify(categories));
+  return data;
 }
 
 async function CategoriesDropdown() {
