@@ -6,4 +6,5 @@ export interface MongoDBCategory {
   };
   properties: string[];
   __v: number;
+  slug: string;
 }

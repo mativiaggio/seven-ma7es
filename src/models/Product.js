@@ -20,6 +20,7 @@ const ProductSchema = new Schema({
   images: [{ type: String }],
   category: { type: Schema.Types.ObjectId, ref: "Category" }, // Adjust type according to your category schema
   featured: Boolean,
+  slug: { type: String, required: true },
 });
 
 export const Product = models.Product || model("Product", ProductSchema);

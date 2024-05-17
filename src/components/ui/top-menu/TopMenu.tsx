@@ -5,6 +5,7 @@ import { IoCartOutline, IoSearchOutline, IoMenu } from "react-icons/io5";
 
 import { Button } from "@/components/ui/button";
 import CategoriesDropdown from "./CategoriesDropdown";
+import Aside from "./Aside";
 
 function TopMenu() {
   return (
@@ -25,12 +26,6 @@ function TopMenu() {
         >
           Inicio
         </Link>
-        {/* <Link
-          className="p-2 m-2 rounded-md transition-all hover:bg-gray-200"
-          href={"/category/mates"}
-        >
-          Mates
-        </Link> */}
         <Link
           className="p-2 m-2 rounded-md transition-all hover:bg-gray-200"
           href={""}
@@ -52,9 +47,9 @@ function TopMenu() {
           </div>
         </Link>
 
-        <Button className="rounded-md transition-all bg-transparent hover:bg-gray-200 text-black">
-          <IoMenu className="w-5 h-5" />
-        </Button>
+        {/* <Button className="rounded-md transition-all bg-transparent hover:bg-gray-200 text-black"> */}
+        <Aside />
+        {/* </Button> */}
       </div>
     </nav>
   );

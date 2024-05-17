@@ -25,7 +25,9 @@ async function CategoriesDropdown() {
   return (
     <>
       <DropdownMenu>
-        <DropdownMenuTrigger>Categorías</DropdownMenuTrigger>
+        <DropdownMenuTrigger className="outline-none">
+          Categorías
+        </DropdownMenuTrigger>
         <DropdownMenuContent>
           <DropdownMenuLabel>Nuestras categorías</DropdownMenuLabel>
           <DropdownMenuSeparator />

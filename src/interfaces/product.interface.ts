@@ -8,4 +8,5 @@ export interface MongoDBProduct {
   category: {
     $oid: string;
   };
+  slug: string;
 }
