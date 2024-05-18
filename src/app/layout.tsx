@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { main_font } from "@/config/fonts";
 import "./globals.css";
+import { ThemeProvider } from "@/components/ui/theme-provider";
 
 export const metadata: Metadata = {
   title: "SEVENMATES",
@@ -13,8 +14,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${main_font.className}`}>{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${main_font.className}`}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
+        {/* {children} */}
+      </body>
     </html>
   );
 }

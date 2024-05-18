@@ -19,13 +19,16 @@ import {
   IoTicketOutline,
 } from "react-icons/io5";
 import Link from "next/link";
+import { Button } from "../button";
 
 function Aside() {
   return (
     <>
       <Sheet>
-        <SheetTrigger className="rounded-md transition-all bg-transparent hover:bg-gray-200 text-black p-2 m-1">
-          <IoMenu className="w-5 h-5" />
+        <SheetTrigger className="rounded-md transition-all bg-transparent">
+          <div className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input hover:text-accent-foreground h-10 w-10 hover:bg-gray-200 text-white hover:text-black bg-transparent border-none">
+            <IoMenu className="w-5 h-5" />
+          </div>
         </SheetTrigger>
         <SheetContent>
           <SheetHeader>
