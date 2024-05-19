@@ -1,4 +1,5 @@
 import LandingMain from "@/components/landing/landing-main";
+import ProductSlider from "@/components/products/porduct-slider/ProductSlider";
 import ProductGrid from "@/components/products/product-grid/ProductGrid";
 import Title from "@/components/ui/title/Title";
 import { mongooseConnect } from "@/lib/mongoose";
@@ -25,6 +26,7 @@ export default async function Home() {
         className={"mb-2"}
       />
 
+      <ProductSlider products={products} />
       <ProductGrid products={products} />
     </>
     // <main>Proximamente... </main>
