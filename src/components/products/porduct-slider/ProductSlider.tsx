@@ -8,6 +8,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import Image from "next/image";
 
 interface Props {
   products: MongoDBProduct[];
@@ -21,21 +22,17 @@ function ProductSlider({ products }: Props) {
     //   ))}
     // </div>
 
-    <div className="w-full flex justify-center items-center">
-      <Carousel className="">
+    <div className="w-full flex justify-center items-center mb-5">
+      <Carousel className="w-9/12 h-[300px]">
         <CarouselContent className="-ml-1">
           {products.map((product) => (
-            <CarouselItem
-              key={product.slug}
-              className="pl-1 md:basis-1/2 lg:basis-1/3"
-            >
-              <div className="p-1">
-                <Card>
-                  <CardContent className="flex aspect-square items-center justify-center p-6">
-                    <span className="text-2xl font-semibold">d</span>
-                  </CardContent>
-                </Card>
-              </div>
+            <CarouselItem key={product.slug} className="pl-1">
+              <Image
+                src={"/examples/example2.jpg"}
+                alt="imagen"
+                width={500}
+                height={500}
+              />
             </CarouselItem>
           ))}
         </CarouselContent>

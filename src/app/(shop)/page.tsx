@@ -20,11 +20,11 @@ export default async function Home() {
   return (
     <>
       <LandingMain />
-      <Title
+      {/* <Title
         title="¿Todavía no sabes bien que es lo que estás buscando?"
         subtitle={"Estos son nuestros productos favoritos."}
         className={"mb-2"}
-      />
+      /> */}
 
       <ProductSlider products={products} />
       <ProductGrid products={products} />
