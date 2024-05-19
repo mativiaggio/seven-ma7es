@@ -12,7 +12,6 @@ interface Props {
 export default async function Home({ params }: Props) {
   const { slug } = params;
   const product = await Product.findOne({ slug: slug });
-  console.log(product);
   if (!product) {
     notFound();
   }
