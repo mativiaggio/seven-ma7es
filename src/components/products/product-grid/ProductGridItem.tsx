@@ -13,7 +13,7 @@ function ProductGridItem({ product }: Props) {
   const [productImage, setProductImage] = useState(product.images[0]);
 
   return (
-    <div className="rounded-sm overflow-hidden fade-in flex bg-gray-200 dark:bg-gray-900">
+    <div className="overflow-hidden fade-in flex bg-gray-200 dark:bg-gray-900">
       <Link href={`/product/${product.slug}`}>
         <Image
           src={productImage}
@@ -22,7 +22,7 @@ function ProductGridItem({ product }: Props) {
           // onMouseLeave={() => setProductImage("/sevenmates/product-mock.jpg")}
           onMouseEnter={() => setProductImage(`${product.images[1]}`)}
           onMouseLeave={() => setProductImage(`${product.images[0]}`)}
-          className="w-full object-cover rounded-sm max-h-[500px] max-w-[500px]"
+          className="w-full object-cover max-h-[500px] max-w-[500px]"
           width={500}
           height={500}
         />
@@ -39,7 +39,7 @@ function ProductGridItem({ product }: Props) {
           </p>
         </div>
         <div className="w-full">
-          <span className="text-xl flex items-center">
+          <span className="text-xl font-bold flex items-center">
             <IoLogoUsd className="mr-1 h-6 w-6" />
             {product.price}
           </span>
