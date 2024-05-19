@@ -16,15 +16,15 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${main_font.className}`}>
-        {/* <ThemeProvider
+        <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
           {children}
-        </ThemeProvider> */}
-        <h1>Proximamente</h1>
+        </ThemeProvider>
+        {/* <h1>Proximamente</h1> */}
       </body>
     </html>
   );

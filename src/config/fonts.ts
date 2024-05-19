@@ -1,6 +1,11 @@
-import { Montserrat_Alternates, Roboto, Gothic_A1 } from "next/font/google";
+import {
+  Montserrat_Alternates,
+  Roboto,
+  Gothic_A1,
+  Open_Sans,
+} from "next/font/google";
 
-export const main_font = Gothic_A1({
+export const main_font = Open_Sans({
   subsets: ["latin"],
   weight: ["500"],
 });

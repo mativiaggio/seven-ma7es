@@ -29,7 +29,9 @@ export default async function Home({ params }: Props) {
         {/* selector de params */}
         {/* selector de cantidad */}
         {/* boton de agregar al carrito */}
-        <Button className="my-5">Agregar al carrito</Button>
+        <Button aria-label="Agregar al carrito" className="my-5">
+          Agregar al carrito
+        </Button>
         {/* description */}
         <h3 className="font-bold text-sm">Descripcion</h3>
         <p className="font-light">{product.description}</p>

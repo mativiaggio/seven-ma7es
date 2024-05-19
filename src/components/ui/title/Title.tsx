@@ -9,9 +9,15 @@ interface Props {
 function Title({ title, subtitle, className }: Props) {
   return (
     <div className={`mt-3 ${className}`}>
-      <h1 className="antialiased text-4xl font-semibold my-10">{title}</h1>
+      <h1 className="text-5xl font-semibold px-0 pt-12 sm:text-4xl sm:px-32 sm:pt-12 mb-3 text-center">
+        {title}
+      </h1>
 
-      {subtitle && <h3 className="text-xl mb-5">{subtitle}</h3>}
+      {subtitle && (
+        <p className="text-center text-l sm:text-2xl font-thin mb-7">
+          {subtitle}
+        </p>
+      )}
     </div>
   );
 }
