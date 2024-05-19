@@ -9,14 +9,19 @@ import Burger from "./Burger";
 
 function TopMenu() {
   return (
-    <nav className=" bg-[#121212] h-fit min-h-[15vh]">
-      <div className="flex px-5 py-1 justify-center items-center w-full">
+    <nav className=" bg-[#121212] h-fit min-h-[5vh]">
+      {/* <div className="flex px-5 py-1 justify-center items-center w-full">
         <Link href={"/"}>
           <Logo />
         </Link>
-      </div>
-      <div className="flex py-1 justify-center sm:justify-between items-center w-full">
-        <div className="hidden sm:block">
+      </div> */}
+      <div className="flex py-1 justify-between items-center w-full">
+        <div className="flex px-5 py-1 items-center w-1/3 justify-start">
+          <Link href={"/"}>
+            <Logo />
+          </Link>
+        </div>
+        <div className="hidden lg:flex w-full lg:justify-center">
           <Link
             className="m-2 rounded-md transition-all hover:bg-gray-200 text-white hover:text-black px-2 py-1.5"
             href={"/"}
@@ -48,12 +53,7 @@ function TopMenu() {
             Contáctanos
           </Link>
         </div>
-        <div className="flex items-center gap-4 mx-2">
-          {/* <Link className="mx-2 flex text-white" href={"/search"}>
-            <IoSearchOutline className="w-5 h-5 text-white" />
-            Buscar
-          </Link> */}
-
+        <div className="flex justify-end items-center gap-4 mx-2 w-1/3">
           <ModeToggle />
           <Link className="mx-2" href={"/cart"}>
             <div className="relative">
@@ -64,7 +64,7 @@ function TopMenu() {
             </div>
           </Link>
           <Aside />
-          <div className="block sm:hidden">
+          <div className="block lg:hidden">
             <Burger />
           </div>
         </div>

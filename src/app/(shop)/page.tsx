@@ -1,9 +1,10 @@
 import LandingMain from "@/components/landing/landing-main";
-import ProductSlider from "@/components/products/porduct-slider/ProductSlider";
-import ProductGrid from "@/components/products/product-grid/ProductGrid";
-import Title from "@/components/ui/title/Title";
 import { mongooseConnect } from "@/lib/mongoose";
 import { Product } from "@/models/Product";
+import { getSlides } from "@/lib/getSlides";
+import Title from "@/components/ui/title/Title";
+import ProductGrid from "@/components/products/product-grid/ProductGrid";
+import LineSeparator from "@/components/ui/line-separator";
 
 async function getProducts() {
   await mongooseConnect();
@@ -15,19 +16,20 @@ async function getProducts() {
 }
 
 export default async function Home() {
+  const slides = getSlides();
   const products = await getProducts();
 
   return (
     <>
-      <LandingMain />
-      {/* <Title
-        title="¿Todavía no sabes bien que es lo que estás buscando?"
-        subtitle={"Estos son nuestros productos favoritos."}
-        className={"mb-2"}
-      /> */}
-
-      <ProductSlider products={products} />
-      <ProductGrid products={products} />
+      <LandingMain slides={slides} />
+      <LineSeparator height="0.5" />
+      <div className="px-5">
+        <Title
+          title={"¿Todavía no sabes bien qué es lo que estás buscando?"}
+          subtitle={"Estos son nuestros productos favoritos."}
+        />
+        <ProductGrid products={products} />
+      </div>
     </>
     // <main>Proximamente... </main>
   );
